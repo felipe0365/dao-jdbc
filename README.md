@@ -70,4 +70,30 @@ WHERE DepartmentId = ?
 ORDER BY Name
 ```
 
+### findAll:
+
+```sql
+SELECT seller.*,department.Name as DepName  
+FROM seller INNER JOIN department  
+ON seller.DepartmentId = department.Id 
+ORDER BY Name
+```
+
+### insert:
+
+```sql
+INSERT INTO seller 
+(Name, Email, BirthDate, BaseSalary, DepartmentId)  
+VALUES  
+(?, ?, ?, ?, ?)
+```
+
+### update:
+
+```sql
+DELETE FROM seller  
+WHERE Id = ? 
+```
+
+
 
